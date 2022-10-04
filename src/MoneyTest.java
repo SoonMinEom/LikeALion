@@ -14,6 +14,8 @@ public class MoneyTest {
                 temp = currentMoney / money[i];
                 currentMoney = currentMoney - (money[i]*temp);
                 System.out.println(money[i] + "원 : " + temp);
+            } else {
+                System.out.println(money[i] + "원 : 0");
             }
         }
 
