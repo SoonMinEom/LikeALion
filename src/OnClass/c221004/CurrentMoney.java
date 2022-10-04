@@ -1,3 +1,5 @@
+package OnClass.c221004;
+
 public class CurrentMoney {
     public static void main(String[] args) {
         int curr50000 = 50000;
