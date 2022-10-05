@@ -2,6 +2,7 @@ package OnClass.c221005;
 
 public class RandomCal implements RandomNum {
     private int a;
+    private int ranNum;
 
     @Override
     public int ran() {
@@ -10,28 +11,31 @@ public class RandomCal implements RandomNum {
 
     public RandomCal(int a) {
         this.a = a;
+        this.ranNum = ran();
+        System.out.println("연산 수 : " + ranNum);
     }
 
     public void plus() {
-        System.out.println( a + ran());
+        System.out.println( a + ranNum);
     }
 
     public void Minus() {
-        System.out.println( a - ran());
+        System.out.println( a - ranNum);
     }
 
     public void Mul() {
-        System.out.println( a + ran());
+        System.out.println( a * ranNum);
     }
 
     public void Div() {
         while(true) {
-            int ran = ran();
-            if ( ran == 0 ) {
+            if ( ranNum == 0 ) {
                 System.out.println("0으로 나눌 수 없습니다.");
+                ranNum = ran();
+                System.out.println("새로운 나누는 수 : " + ranNum);
                 continue;
             } else {
-                double result = (double) a / ran;
+                double result = (double) a / ranNum;
                 System.out.println(result);
                 break;
             }
