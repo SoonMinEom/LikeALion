@@ -7,8 +7,10 @@ public class Main {
         NumberGenerator RN = new RandomNumberGenerator();
         NumberGenerator SN = new SpecificNumberGenerator();
 
-        Calculator rcal = new Calculator(5 ,RN);
-        Calculator scal = new Calculator(5, SN);
+        Calculator rcal = new Calculator(RN);
+        rcal.plus(5);
+        Calculator scal = new Calculator(SN);
+        scal.plus(6);
 
     }
 
