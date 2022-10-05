@@ -1,5 +1,7 @@
 package OnClass.c221005;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Calculator {
     public void Plus (int a, int b) {
         System.out.println(a + b);
@@ -14,6 +16,7 @@ public class Calculator {
     }
 
     public void Divide (int a, int b) {
-        System.out.println(a / b);
+        double result = (double)a / b;
+        System.out.println(result);
     }
 }

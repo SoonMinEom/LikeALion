@@ -8,6 +8,6 @@ public class CalculatorMain {
         cal.Plus(20 , 10);
         cal.Minus(20, 10);
         cal.Multiple(20,10);
-        cal.Divide(20, 10);
+        cal.Divide(10, 20);
     }
 }
