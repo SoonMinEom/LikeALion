@@ -26,12 +26,14 @@ public class RandomeCal implements RandomeNum {
 
     public void Div() {
         while(true) {
-            try {
-                System.out.println(a / ran());
-                break;
-            } catch (ArithmeticException e) {
+            int ran = ran();
+            if ( ran == 0 ) {
                 System.out.println("0으로 나눌 수 없습니다.");
                 continue;
+            } else {
+                double result = (double) a / ran;
+                System.out.println(result);
+                break;
             }
         }
     }
