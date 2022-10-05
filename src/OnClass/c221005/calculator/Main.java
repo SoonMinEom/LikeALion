@@ -12,6 +12,10 @@ public class Main {
         Calculator scal = new Calculator(SN);
         scal.plus(6);
 
+        //오버로딩된 메소드 써보기
+        Calculator ocal = new Calculator(50,SN);
+        ocal.plus(6);
+
     }
 
 }
