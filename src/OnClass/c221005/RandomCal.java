@@ -1,6 +1,6 @@
 package OnClass.c221005;
 
-public class RandomeCal implements RandomeNum {
+public class RandomCal implements RandomNum {
     private int a;
 
     @Override
@@ -8,7 +8,7 @@ public class RandomeCal implements RandomeNum {
         return (int)(Math.random()*9);
     }
 
-    public RandomeCal(int a) {
+    public RandomCal(int a) {
         this.a = a;
     }
 

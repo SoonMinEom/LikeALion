@@ -1,5 +1,5 @@
 package OnClass.c221005;
 
-public interface RandomeNum {
+public interface RandomNum {
     public int ran();
 }
