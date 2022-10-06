@@ -4,9 +4,7 @@ public class MapExercise2_1 {
 
 
     public static boolean isAlpha(char c) {
-        if ( c >=65 && c <=90) {
-            return true;
-        } else if (c >= 97 && c <=122) {
+        if ( (c >='A' && c <='Z') || (c >= 'a' && c <='z') ) {
             return true;
         } else {
             return false;
