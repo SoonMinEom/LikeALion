@@ -24,5 +24,16 @@ public class FileExercise {
             System.out.println(file);
         }
 
+//        .\.git
+//                .\.gitignore
+//                .\.idea
+//                .\a_file.txt
+//                .\LikeALion.iml
+//                .\out
+//                .\src
+//
+//        Process finished with exit code 0
+
+
     }
 }
