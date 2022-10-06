@@ -19,6 +19,7 @@ public class MapExercise2 {
             }
         }
 
+        // 여기서 부터 구글의 힘을..
         HashMap<Character, Integer> al_cnt = new HashMap<>();
 
         for (int i = 0 ; i < al.size() ; i++) {
