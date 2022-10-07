@@ -2,7 +2,9 @@ package OnClass.c221007;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static OnClass.c221007.PopulationMove.PopulationMoveParse;
 
@@ -78,10 +80,26 @@ public class PopulationStatistics {
         }
     }
 
+    // 키 만들기
+    // map에 키에 해당하는 밸류 없으면 1 대입
+    // map에 키에 해당하는 밸류 있으면 +1
+    // 리턴
+    public Map<String, Integer> getMoveCntMap(List<PopulationMove> pml) {
+        Map<String, Integer> moveCntMap = new HashMap<>();
+        for(PopulationMove pm : pml) {
+            String key = pm.getFromSido()+","+pm.getToSido();
+           if(moveCntMap.get(key) == null) {
+               moveCntMap.put(key, 1);
+           } else{
+               moveCntMap.put(key, moveCntMap.get(key)+1);
+           }
+        }
+        return  moveCntMap;
+    }
+
     public String fromToString(PopulationMove populationMove) {
         return populationMove.getFromSido() + "," + populationMove.getToSido()+"\n";
     }
-
 
     public static void main(String[] args) throws IOException {
 
@@ -108,9 +126,22 @@ public class PopulationStatistics {
         PopulationStatistics populationStatistics2 = new PopulationStatistics();
         List<PopulationMove> pml2 = populationStatistics2.readByLine(address);
 
-        for(PopulationMove pm : pml2) {
-             System.out.printf("전입:%s, 전출:%s\n",pm.getFromSido(), pm.getToSido());
+//        for(PopulationMove pm : pml2) {
+//             System.out.printf("전입:%s, 전출:%s\n",pm.getFromSido(), pm.getToSido());
+//        }
+
+        Map<String, Integer> map = populationStatistics2.getMoveCntMap(pml2);
+        String targetFilename = "for_heatmap.txt";
+        populationStatistics2.createAFile(targetFilename);
+        List<String> cntResult = new ArrayList<>();
+        for (String key : map.keySet()) {
+            String[] fromto = key.split("\\,");
+            String s = String.format("[%s, %s, %d]\n",fromto[0],fromto[1],map.get(key));
+            cntResult.add(s);
+            //System.out.printf("key : %s value : %d\n",key, map.get(key));
         }
+        populationStatistics2.write(cntResult, targetFilename);
+
 
     }
 }
