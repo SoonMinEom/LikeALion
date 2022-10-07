@@ -5,6 +5,10 @@ public class PopulationMove {
     private int toSido;
 
     // 생성자
+
+    public PopulationMove() {
+    }
+
     public PopulationMove(int fromSido, int toSido) {
         this.fromSido = fromSido;
         this.toSido = toSido;
@@ -19,7 +23,7 @@ public class PopulationMove {
     }
 
     public PopulationMove PopulationMoveParse (String data) {
-        String[] sidoData = data.split("//,");
+        String[] sidoData = data.split("\\,");
         return new PopulationMove(Integer.parseInt(sidoData[0]), Integer.parseInt(sidoData[6]));
     }
 }
