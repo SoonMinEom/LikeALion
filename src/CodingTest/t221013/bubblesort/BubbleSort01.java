@@ -12,21 +12,32 @@ public class BubbleSort01 {
 
     public int[] BubbleSort(int[] arr) {
 
-        // 강사님 방식. 떨어진 것끼리 교환.
         for (int i = 0 ; i < arr.length-1 ; i ++) {
-            for (int j = i ; j < arr.length ; j++) {
-                if( arr[i] > arr[j] ) {
-                    int temp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = temp;
+            for (int j = 0 ; j < arr.length-1 ; j++) {
+                if( arr[j] > arr[j+1] ) {
+                    int temp = arr[j+1];
+                    arr[j+1] = arr[j];
+                    arr[j] = temp;
                 }
             }
         }
         return arr;
+
+        // 강사님 방식. 떨어진 것끼리 교환.
+//        for (int i = 0 ; i < arr.length-1 ; i ++) {
+//            for (int j = i ; j < arr.length ; j++) {
+//                if( arr[i] > arr[j] ) {
+//                    int temp = arr[j];
+//                    arr[j] = arr[i];
+//                    arr[i] = temp;
+//                }
+//            }
+//        }
+//        return arr;
     }
 
     public static void main(String[] args) {
-        int[] arr = {7, 2, 3, 9, 28, 11};
+        int[] arr = {7, 3, 11, 9, 28, 2};
 
         BubbleSort01 bs = new BubbleSort01();
         int[] result = bs.BubbleSort(arr);
