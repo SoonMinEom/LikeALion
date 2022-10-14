@@ -1,11 +1,18 @@
 package CodingTest.t221014.insertionSort;
 
+import java.util.Arrays;
+
 public class InsertionSort01 {
 
     public int[] sort (int[] arr) {
-        int i = 0;
+        int i = 1;
+        if (arr[i] < arr[i-1]) {
+            int temp = arr[i-1];
+            arr[i-1] = arr[i];
+            arr[i] = temp;
+        }
 
-        return null;
+        return arr;
     }
 
     public static void main(String[] args) {
@@ -16,6 +23,8 @@ public class InsertionSort01 {
         InsertionSort01 is = new InsertionSort01();
 
         is.sort(arr);
+
+        System.out.println(Arrays.toString(arr));
 
     }
 }
