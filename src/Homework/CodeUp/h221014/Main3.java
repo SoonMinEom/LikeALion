@@ -7,12 +7,13 @@ public class Main3 {
 
         Scanner sc = new Scanner(System.in);
 
-        int a = sc.nextInt();
-
-        while( a > 0) {
-            System.out.println(a);
-            a--;
-        }
+        while( true) {
+            int a = sc.nextInt();
+            if ( a == 0) {
+                break;
+            } else {
+                System.out.println(a);
+            }}
 
     }
 }
