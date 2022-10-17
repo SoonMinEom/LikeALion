@@ -12,7 +12,7 @@ public class Pyramid {
         this.letter = "*";
     }
 
-    public void RightTriangleMaker(int level) {
+    public void PyramidMaker(int level) {
         for (int i = 0 ; i < level ; i++) {
             for (int j =0; j <level+1 ; j++) {
                 if (j < level-i) {
@@ -28,7 +28,7 @@ public class Pyramid {
     public static void main(String[] args) {
 
         Pyramid rt = new Pyramid("# ");
-        rt.RightTriangleMaker(10);
+        rt.PyramidMaker(10);
 
     }
 }
