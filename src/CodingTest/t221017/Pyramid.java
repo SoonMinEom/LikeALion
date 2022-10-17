@@ -5,11 +5,11 @@ public class Pyramid {
     String letter;
 
     public Pyramid(String letter) {
-        this.letter = letter;
+        this.letter = letter+" ";
     }
 
     public Pyramid() {
-        this.letter = "*";
+        this.letter = "* ";
     }
 
     public void PyramidMaker(int level) {
@@ -27,7 +27,7 @@ public class Pyramid {
 
     public static void main(String[] args) {
 
-        Pyramid rt = new Pyramid("# ");
+        Pyramid rt = new Pyramid("#");
         rt.PyramidMaker(10);
 
     }
