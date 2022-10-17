@@ -1,14 +1,14 @@
 package CodingTest.t221017;
 
-public class piramid {
+public class Pyramid {
 
     String letter;
 
-    public piramid(String letter) {
+    public Pyramid(String letter) {
         this.letter = letter;
     }
 
-    public piramid() {
+    public Pyramid() {
         this.letter = "*";
     }
 
@@ -27,7 +27,7 @@ public class piramid {
 
     public static void main(String[] args) {
 
-        piramid rt = new piramid("* ");
+        Pyramid rt = new Pyramid("# ");
         rt.RightTriangleMaker(10);
 
     }
